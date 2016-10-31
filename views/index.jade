@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= title
+    form(action="/", method="post")
+        textarea(cols=50, rows=4, name="translate-me")= translated
+        br
+        button(type="submit") Translate
