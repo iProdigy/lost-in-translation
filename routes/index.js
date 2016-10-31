@@ -34,12 +34,9 @@ function loseInTranslation(input, callback) {
     }
 
     function run(i) {
-        if (i === languages.length) {
+        if (i === languages.length || err) {
             done();
         } else if (i < languages.length && i > 0) {
-            if (err)
-                done();
-
             var source = languages[i - 1];
             var target = languages[i];
 
